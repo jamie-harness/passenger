@@ -17,7 +17,7 @@ def setupTest(enablerFlag, nodeLabel, environment, block) {
 }
 
 pipeline {
-  agent { node { label 'master-pipeline' } }
+  agent any
 
   options {
     buildDiscarder(logRotator(numToKeepStr: '15'))
